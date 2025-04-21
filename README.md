@@ -100,7 +100,7 @@
 
 The quickest way to get started as shown below:
 
-##### 🌐 Frontend Environment Variables Setup (.env)
+#### 🌐 Frontend Environment Variables Setup (.env)
 Create a .env file in the ***frontend*** directory of your React project and define the following environment variables:
 
 ```
@@ -112,8 +112,8 @@ REACT_APP_SITE_KEY=       # reCAPTCHA v2 or v3 Site Key (used on the client side
 
 > ⚠️ Note: All environment variables in React must begin with REACT_APP_ to be accessible in the app.
 
-##### 🔧 Backend Environment Variables Setup (.env)
-Create a .env file in the ***Backend*** directory of the project and add the following environment variables:
+#### 🔧 Backend Environment Variables Setup (.env)
+Create a .env file in the ***backend*** directory of the project and add the following environment variables:
 
 ```
 # Server Configuration
