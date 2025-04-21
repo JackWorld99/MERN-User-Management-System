@@ -100,7 +100,51 @@
 
 The quickest way to get started as shown below:
 
-> Create .env files to manage environment variables for your startup.
+##### 🌐 Frontend Environment Variables Setup (.env)
+Create a .env file in the ***frontend*** directory of your React project and define the following environment variables:
+
+```
+REACT_APP_SERVER_URL=     # The base URL of your backend API, e.g., http://localhost:5000
+REACT_APP_SOCKET_URL=     # WebSocket server URL, e.g., ws://localhost:5000
+REACT_APP_BASE_URL=       # Base URL of the frontend application, e.g., http://localhost:3000
+REACT_APP_SITE_KEY=       # reCAPTCHA v2 or v3 Site Key (used on the client side)
+```
+
+> ⚠️ Note: All environment variables in React must begin with REACT_APP_ to be accessible in the app.
+
+##### 🔧 Backend Environment Variables Setup (.env)
+Create a .env file in the ***Backend*** directory of the project and add the following environment variables:
+
+```
+# Server Configuration
+PORT=              # Port for the backend server, e.g., 5000
+REACT_PORT=        # Port for the frontend React app, e.g., 3000
+SERVER_URL=        # Full backend URL, e.g., http://localhost:5000
+CLIENT_URL=        # Full frontend URL, e.g., http://localhost:3000
+
+# Database & Cache
+DATABASE_URL=      # Database connection string, e.g., mongodb://localhost:27017/<database>
+REDIS_URL=         # Redis host, e.g., 127.0.0.1
+REDIS_PORT=        # Redis port, e.g., 6379
+REDIS_PASSWORD=    # Redis password (leave blank if not set)
+
+# Token & Security Secrets
+ACCESS_TOKEN_SECRET=       # Secret for generating access tokens
+REFRESH_TOKEN_SECRET=      # Secret for generating refresh tokens
+SESSION_TOKEN_SECRET=      # Secret for session tokens
+OTP_TOKEN_SECRET=          # Secret used for generating OTP codes
+
+# Third-Party Services
+GOOGLE_CLIENT_ID=          # Google OAuth Client ID
+GOOGLE_CLIENT_SECRET=      # Google OAuth Client Secret
+RECAPTCHA_SECRET_KEY=      # Google reCAPTCHA secret key
+
+# Admin Credentials (for initial setup)
+ADMIN_EMAIL=               # Default admin email
+ADMIN_PASS=                # Default admin password
+``` 
+
+> ⚠️ Note: Never commit your .env file to version control. Be sure to include it in your .gitignore file to keep sensitive information secure.
 
 ##### Server Side
 
